@@ -1,0 +1,47 @@
+<div class="modal fade" id="aboutModal5" tabindex="-1" aria-labelledby="aboutModalLabel3" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" id="aboutModal3">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="aboutModalLabel">Editar experiencia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+          <div class="container col-md-12">
+            <div class="card">
+                <div class="class-body">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="">Razón social:</label>
+                            <input type="text" name="empleador" [(ngModel)]="experiencia.empleador" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Titulo del puesto:</label>
+                            <input type="text" name="titulopuesto" [(ngModel)]="experiencia.titulopuesto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Descripción del puesto:</label>
+                          <input type="text" name="descripcionpuesto" [(ngModel)]="experiencia.descripcionpuesto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Periodo:</label>
+                            <input type="text" name="periodo" [(ngModel)]="experiencia.periodo" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="">Imagen:</label>
+                          <input type="text" name="imagenemp" [(ngModel)]="experiencia.imagenemp" class="form-control">
+                        </div>
+                        <br>
+                        <button (click)="Actualizar(experiencia)" class="btn btn-primary"  data-bs-dismiss="modal"><i class="fa fa-floppy-o"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning tooltips" data-bs-dismiss="modal"><i class="fa fa-times"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>

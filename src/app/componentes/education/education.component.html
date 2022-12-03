@@ -1,0 +1,22 @@
+<div class="row">
+    <span>
+        <h2>Educación</h2><a data-bs-toggle="modal" (click)="Add()" data-bs-target="#aboutModal3" class="btn btn-success tooltips" data-placement="top" data-toogle="tolltip" data-original-title="Edit"  style="margin-left:5px"
+        ><i class="fa fa-plus"></i></a>
+    </span>
+    <table class="table table-hover">
+        <tbody>
+            <tr *ngFor="let educacion of educaciones" class="text-center">
+               <td><img src="{{educacion.imagenedu}}" id="imgEdu" class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></td>
+               <h5><td class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><b>{{educacion.institucionedu}}</b></td></h5>
+               <td class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><b>{{educacion.tituloedu}}</b></td>
+               <td class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><b>{{educacion.fechaedu}}</b></td>
+               <td>
+                <a data-bs-toggle="modal" class="btn btn-primary tooltips" data-bs-target="#aboutModal3" (click)="Editar(educacion);EditEdu()" data-placement="top" data-toogle="tolltip" data-original-title="EditEdu"
+                ><i class="fa fa-pencil"></i></a>
+                <a class="btn btn-danger tooltips" (click)="Delete(educacion)" style="margin-left:5px" data-placement="top" data-toogle="tolltip" data-original-title="Delete"
+                 ><i class="fa fa-trash"></i></a>
+             </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

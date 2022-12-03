@@ -1,0 +1,31 @@
+
+<div class="row">
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <div *ngFor="let usuario of usuarios">
+            <img src="{{usuario.fotoperfil}}" id="perfil">
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <h4 id="nombre"><tr *ngFor="let usuario of usuarios">
+            <td>{{usuario.nombre+' '+usuario.apellido}}</td></h4>
+        <h5 id="titulo"><tr *ngFor="let usuario of usuarios">
+            <td>{{usuario.titulo}}</td></h5>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+        <span>
+           <h3 >Acerca de:</h3>
+           <h5><tr *ngFor="let usuario of usuarios">
+            <td>{{usuario.descripcion}}</td></h5>
+        </span>
+    </div>
+</div>
+<div  id="botones">
+  <a data-bs-toggle="modal" class="btn btn-primary tooltips" data-bs-target="#aboutModal2"  *ngFor="let usuario of usuarios" (click)="Editar(usuario);Edit()" data-placement="top" data-toogle="tolltip" data-original-title="EditAbout"
+  ><i class="fa fa-pencil"></i></a>
+  <a class="btn btn-danger tooltips" *ngFor="let usuario of usuarios" (click)="Delete(usuario)" style="margin-left:5px" data-placement="top" data-toogle="tolltip" data-original-title="Delete"
+  ><i class="fa fa-trash"></i></a>
+  <a data-bs-toggle="modal" (click)="Add()" data-bs-target="#aboutModal" class="btn btn-success tooltips" data-placement="top" data-toogle="tolltip" data-original-title="Edit"  style="margin-left:5px"
+  ><i class="fa fa-plus"></i></a> 
+</div>
+
+

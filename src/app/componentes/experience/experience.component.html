@@ -1,0 +1,23 @@
+<div class="row">
+    <span>
+        <h2>Experiencia</h2><a data-bs-toggle="modal" (click)="Add()" data-bs-target="#aboutModal5" class="btn btn-success tooltips" data-placement="top" data-toogle="tolltip" data-original-title="Edit"  style="margin-left:5px"
+        ><i class="fa fa-plus"></i></a>
+    </span>
+    <table class="table table-hover">
+        <tbody>
+            <tr *ngFor="let experiencia of experiencias" class="text-center">
+               <td><img src="{{experiencia.imagenemp}}" id="imgEmp" class="col-xs-12 col-sm-2 col-md-2 col-lg-2"></td>
+               <h5><td class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><b>{{experiencia.empleador}}</b></td></h5>
+               <td class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><b>{{experiencia.titulopuesto}}</b></td>
+               <td class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><b>{{experiencia.descripcionpuesto}}</b></td>
+               <td class="col-xs-12 col-sm-2 col-md-2 col-lg-2"><b>{{experiencia.periodo}}</b></td>
+               <td>
+                <a data-bs-toggle="modal" class="btn btn-primary tooltips" data-bs-target="#aboutModal5" (click)="Editar(experiencia);EditExp()" data-placement="top" data-toogle="tolltip" data-original-title="EditEdu"
+                ><i class="fa fa-pencil"></i></a>
+                <a class="btn btn-danger tooltips" (click)="Delete(experiencia)" style="margin-left:5px" data-placement="top" data-toogle="tolltip" data-original-title="Delete"
+                 ><i class="fa fa-trash"></i></a>
+             </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

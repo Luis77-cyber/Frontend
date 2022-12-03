@@ -1,0 +1,56 @@
+
+<div class="row">
+  <span>
+    <h2>Conocimientos</h2><a data-bs-toggle="modal" (click)="AddSkill()" data-bs-target="#aboutModal4" class="btn btn-success tooltips" data-placement="top" data-toogle="tolltip" data-original-title="Edit"  style="margin-left:5px"
+    ><i class="fa fa-plus"></i></a>
+  </span>
+      <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let conocimiento of skills">
+      <tr>
+        <circle-progress 
+        [percent]=conocimiento.porcentaje
+        [imageSrc]=conocimiento.imagencon
+        ></circle-progress>
+      </tr>
+      <td>
+        <a data-bs-toggle="modal" class="btn btn-primary tooltips" data-bs-target="#aboutModal4" (click)="Editar(conocimiento);EditSkill()" data-placement="top" data-toogle="tolltip" data-original-title="EditEdu"
+        ><i class="fa fa-pencil"></i></a>
+        <a class="btn btn-danger tooltips" (click)="Delete(conocimiento)" style="margin-left:5px" data-placement="top" data-toogle="tolltip" data-original-title="Delete"
+         ><i class="fa fa-trash"></i></a>
+     </td>
+      </div>
+  
+<!--       <div class="text-center col-sm-4 col-md-4 col-lg-4">
+      <circle-progress
+        [percent]="70"
+        [imageSrc]="'../assets/CSS.png'"
+     ></circle-progress>
+      </div>
+  
+      <div class="text-center col-sm-4 col-md-4 col-lg-4">
+      <circle-progress
+        [percent]="55"
+        [imageSrc]="'../assets/js.png'"
+     ></circle-progress>
+      </div>
+  
+      <div class="text-center col-sm-4 col-md-4 col-lg-4">
+        <circle-progress
+          [percent]="75"
+          [imageSrc]="'../assets/PHP-logo.svg.png'"
+       ></circle-progress>
+        </div>
+  
+      <div class="text-center col-sm-4 col-md-4 col-lg-4">
+      <circle-progress
+        [percent]="55"
+        [imageSrc]="'../assets/git.png'"
+     ></circle-progress>
+      </div>
+  
+      <div class="text-center col-sm-4 col-md-4 col-lg-4">
+      <circle-progress
+        [percent]="45"
+        [imageSrc]="'../assets/eng.png'"
+     ></circle-progress>
+      </div> -->
+  </div>

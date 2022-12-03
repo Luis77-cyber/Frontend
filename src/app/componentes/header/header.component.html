@@ -1,0 +1,61 @@
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="contenedor">
+        <div class="logo">
+            <img src="../../../assets/APLogo.png" id="logoAP">
+            <img width="140" src="../../../assets/Yo programo.jpg" id="logoYP"/>
+        </div>
+        <div class="redes">
+                <a href="https://www.facebook.com/luis.dago.90/"><img src="../../../assets/facebook.png" id="facebook"></a>
+                <a href="https://www.linkedin.com/in/luis-d-agostino-734593125"><img src="../../../assets/linkedin.png" id="linkedin" style="margin-left: 5px;"></a>
+                <a href=""><img src="../../../assets/github.png" id="github" style="margin-left: 5px;"></a>
+                <button type="button" class="btn btn-outline-light" style="margin-left: 5px;" (click)="login()" *ngIf="!isLogged">LOGIN</button>
+                <button type="button" class="btn btn-outline-light" style="margin-left: 5px;" (click)="onLogOut()" *ngIf="isLogged">LOGOUT</button>
+        </div>
+    </div>  
+</div>
+
+<div *ngFor="let banner of banners; first as isFirst">
+  <div *ngIf="isFirst"><img src="{{banner.img}}" id="banner"></div>
+</div>
+
+<div id="botones">
+  <a data-bs-toggle="modal" data-bs-target="#headerModal" class="btn btn-primary tooltips" data-placement="top" data-toogle="tolltip" data-original-title="Edit"><i class="fa fa-pencil"></i></a>
+  <a data-bs-toggle="modal" (click)="Add()" data-bs-target="#headerModal" class="btn btn-success tooltips" data-placement="top" data-toogle="tolltip" data-original-title="Edit"  style="margin-left:5px"
+  ><i class="fa fa-plus"></i></a>
+</div>
+
+<div class="modal fade" id="headerModal" tabindex="-1" aria-labelledby="headerModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar banner</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <table class="table table-hover">
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>IMAGEN</th>
+                      <th>BORRAR</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let banner of banners" class="text-center">
+                     <td>{{banner.id}}</td>
+                     <td>{{banner.img}}</td>
+                     <td>
+                        <button (click)="Delete(banner)" class="btn btn-danger" style="margin-left:10px;"><i class="fa fa-trash"></i></button>
+                     </td>
+                  </tr>
+              </tbody>
+          </table>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="fa fa-times"></i></button>
+</div>
+
+
+
